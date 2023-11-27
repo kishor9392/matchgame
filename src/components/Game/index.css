@@ -1,0 +1,15 @@
+.li {
+  list-style-type: none;
+  margin-right: 5px;
+}
+
+.tImg {
+  width: 160px;
+}
+
+.button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+}

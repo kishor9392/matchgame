@@ -1,0 +1,23 @@
+.list {
+  list-style-type: none;
+}
+
+.btn {
+  font-weight: 500;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  margin-right: 20px;
+}
+
+.btn1 {
+  border: 2px solid #fec653;
+  color: #fec653;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
