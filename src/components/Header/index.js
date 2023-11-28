@@ -4,14 +4,16 @@ const Header = props => {
   const {score, timer} = props
 
   return (
-    <div className="bg">
-      <img
-        src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png "
-        className="img"
-        alt="website logo"
-      />
+    <ul className="bg">
+      <li className="li">
+        <img
+          src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png "
+          className="img"
+          alt="website logo"
+        />
+      </li>
 
-      <div className="bg1">
+      <li className="bg1 li">
         <p className="p">
           Score: <span className="p1">{score}</span>
         </p>
@@ -23,12 +25,10 @@ const Header = props => {
             className="timer"
           />
 
-          <p className="p1">
-            <span className="p1">{timer}</span> sec
-          </p>
+          <p className="p1">{timer} Sec</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   )
 }
 
