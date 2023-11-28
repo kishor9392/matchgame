@@ -17,7 +17,7 @@ const Over = props => {
 
       <p className="score">YOUR SCORE</p>
 
-      <h1 className="score">{score}</h1>
+      <p className="score">{score}</p>
 
       <button type="button" className="btn" onClick={onTap}>
         <div className="obg2">
@@ -26,6 +26,7 @@ const Over = props => {
             alt="reset"
             className="reset"
           />
+
           <p className="score">PLAY AGAIN</p>
         </div>
       </button>
