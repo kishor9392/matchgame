@@ -41,3 +41,7 @@
   font-weight: 500;
   font-family: 'Roboto';
 }
+
+.li {
+  list-style-type: none;
+}
