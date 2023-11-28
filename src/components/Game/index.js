@@ -3,7 +3,7 @@ import './index.css'
 const Game = props => {
   const {list, updateRandomImage, past} = props
 
-  const {thumbnailUrl, category, id} = list
+  const {thumbnailUrl, id} = list
 
   const id2 = past.id
 
@@ -18,7 +18,7 @@ const Game = props => {
   return (
     <li className="li">
       <button type="button" className="button" onClick={click}>
-        <img src={thumbnailUrl} alt={category} className="tImg" />
+        <img src={thumbnailUrl} alt="thumbnail" className="tImg" />
       </button>
     </li>
   )
