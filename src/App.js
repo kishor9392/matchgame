@@ -258,7 +258,7 @@ class App extends Component {
     cat: tabsList[0].tabId,
     score: 0,
     over: false,
-    timer: 59,
+    timer: 60,
   }
 
   componentDidMount() {
@@ -275,6 +275,7 @@ class App extends Component {
       cat: tabsList[0].tabId,
       score: 0,
       over: false,
+      timer: 60,
     })
   }
 
@@ -292,9 +293,9 @@ class App extends Component {
   }
 
   updateTime = () => {
-    const {timer, over} = this.state
+    const {timer} = this.state
     if (timer === 0) {
-      this.setState((over: true))
+      this.setState({over: true})
       clearInterval(this.timeInterval)
     } else {
       this.setState(prevState => ({timer: prevState.timer - 1}))
@@ -304,18 +305,23 @@ class App extends Component {
   render() {
     const {randomImage, cat, over, score, timer} = this.state
     const {imageUrl} = randomImage
-    const {category} = randomImage
     const newList = imagesList.filter(each => each.category === cat)
     return (
       <div className="back">
         <Header score={score} timer={timer} />
 
         {over ? (
-          <Over score={score} reset={this.onReset} />
+          <div className="over">
+            <Over
+              score={score}
+              reset={this.onReset}
+              timer={this.timeInterval}
+            />
+          </div>
         ) : (
           <>
             <div className="mImg">
-              <img src={imageUrl} className="pic" alt={category} />
+              <img src={imageUrl} className="pic" alt="match" />
             </div>
             <ul className="ul">
               {tabsList.map(each => (
